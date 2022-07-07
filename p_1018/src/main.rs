@@ -6,6 +6,7 @@ fn main() {
     io::stdin().read_line(&mut _cash).unwrap();
 
     let mut cash: i64 = _cash.trim().parse().unwrap();
+    let cash_initial = cash;
 
     let cash_100: i64 = cash / 100;
     cash -= cash_100 * 100;
@@ -27,6 +28,7 @@ fn main() {
 
     let cash_1: i64 = cash;
 
+    println!("{}", cash_initial);
     println!("{} nota(s) de R$ 100,00", cash_100);
     println!("{} nota(s) de R$ 50,00", cash_50);
     println!("{} nota(s) de R$ 20,00", cash_20);
